@@ -33,7 +33,7 @@ class PermissionsExample extends React.Component {
             <Text style={[styles.touchable, styles.text]}>检查许可 Check Permission</Text>
           </View>
         </TouchableWithoutFeedback>
-        <Text style={styles.text}>Permission Status: {this.state.hasPermission}</Text>
+        <Text style={styles.text}>许可状态 Permission Status: {this.state.hasPermission}</Text>
         <TouchableWithoutFeedback onPress={this._requestPermission}>
           <View>
             <Text style={[styles.touchable, styles.text]}>请求许可 Request Permission</Text>
@@ -54,7 +54,7 @@ class PermissionsExample extends React.Component {
     let result = await PermissionsAndroid.check(this.state.permission);
     console.log('_checkPermission ：', result)
     this.setState({
-      hasPermission: (result ? 'Granted' : 'Revoked') + ' for ' +
+      hasPermission: (result ? '假定 Granted' : '废弃 Revoked') + ' for ' +
         this.state.permission,
     });
   };

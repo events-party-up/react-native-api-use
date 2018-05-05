@@ -121,27 +121,27 @@ export default class Demo extends React.Component {
     return (
       <ScrollView style={styles.container}>
         <Text style={styles.text}>
-          'Switches can be set to true or false',
+          开关能被设置为true或者false 'Switches can be set to true or false',
         </Text>
         <BasicSwitchExample />
 
         <Text style={styles.text}>
-          'Switches can be disabled',
+          开关是禁用的 'Switches can be disabled',
         </Text>
         <DisabledSwitchExample />
 
         <Text style={styles.text}>
-          'Change events can be detected',
+          可以监听改变 'Change events can be detected',
         </Text>
         <EventSwitchExample />
 
         <Text style={styles.text}>
-          'Switches are controlled components',
+          开关是可控的组件 'Switches are controlled components',
         </Text>
         <Switch />
 
         <Text style={styles.text}>
-          'Custom colors can be provided',
+          可以提供自定义颜色 'Custom colors can be provided',
         </Text>
         <ColorSwitchExample />
       </ScrollView>

@@ -37,12 +37,12 @@ export default class AddRemoveExample extends React.Component {
       <View style={styles.container}>
         <TouchableOpacity onPress={this._onPressAddView}>
           <View style={styles.button}>
-            <Text>Add view</Text>
+            <Text>增加视图 Add view</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity onPress={this._onPressRemoveView}>
           <View style={styles.button}>
-            <Text>Remove view</Text>
+            <Text>移除视图 Remove view</Text>
           </View>
         </TouchableOpacity>
         <View style={styles.viewContainer}>
@@ -87,7 +87,7 @@ export default class CrossFadeExample extends React.Component {
       <View style={styles.container}>
         <TouchableOpacity onPress={this._onPressToggle}>
           <View style={styles.button}>
-            <Text>Toggle</Text>
+            <Text>切换 Toggle</Text>
           </View>
         </TouchableOpacity>
         <View style={styles.viewContainer}>

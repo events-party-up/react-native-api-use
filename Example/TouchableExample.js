@@ -23,7 +23,7 @@ export default class Demo extends React.Component {
   }
   
   render() {
-    console.log('Demo 组件 this.state, this.props ：', this.state, this.props, )
+    console.log('Demo 组件 this.state, this.props ：', forceTouchAvailable, this.state, this.props, )
     const mScale = new Animated.Value(1);
     Animated.timing(mScale, {toValue: 0.3, duration: 1000}).start();
     const style = {
@@ -33,11 +33,10 @@ export default class Demo extends React.Component {
       transform: [{scale: mScale}]
     };
 
-
     return (
       <ScrollView style={styles.container}>
         <Text style={styles.text}>
-          TouchableHighlight  
+          高亮按钮 TouchableHighlight  
         </Text>
         <View>
           <View style={styles.row}>
@@ -57,7 +56,7 @@ export default class Demo extends React.Component {
               onPress={() => console.log('custom THW text - highlight')}>
               <View style={styles.wrapperCustom}>
                 <Text style={styles.text}>
-                  Tap Here For Custom Highlight!
+                  点击这里看看传统的高亮 Tap Here For Custom Highlight!
                 </Text>
               </View>
             </TouchableHighlight>
@@ -65,15 +64,15 @@ export default class Demo extends React.Component {
         </View>
 
         <Text style={styles.text}>
-          'TouchableNativeFeedback with Animated child',
+          带有动画的反馈按钮 'TouchableNativeFeedback with Animated child',
         </Text>
-      <View>
-        <View style={styles.row}>
-          <TouchableNativeFeedback>
-            <Animated.View style={style}/>
-          </TouchableNativeFeedback>
+        <View>
+          <View style={styles.row}>
+            <TouchableNativeFeedback>
+              <Animated.View style={style}/>
+            </TouchableNativeFeedback>
+          </View>
         </View>
-      </View>
         
         <Text style={styles.text}>
           'Text onPress={fn}> with highlight',
@@ -81,28 +80,27 @@ export default class Demo extends React.Component {
         <TextOnPressBox />
         
         <Text style={styles.text}>
-          'Touchable feedback events',
+          带有反馈事件 'Touchable feedback events',
         </Text>
         <TouchableFeedbackEvents />
         
         <Text style={styles.text}>
-          'Touchable delay for events',
+          带有延迟事件的按钮 'Touchable delay for events',
         </Text>
         <TouchableDelayEvents />
 
         <Text style={styles.text}>
-          '3D Touch / Force Touch',
+          3d效果的按钮 按压 '3D Touch / Force Touch',
         </Text>
         <ForceTouchExample />
         
         <Text style={styles.text}>
-          'Touchable Hit Slop',
+          溢出的按钮 'Touchable Hit Slop',
         </Text>
         <TouchableHitSlop />
 
-
         <Text style={styles.text}>
-          'Disabled Touchable*',
+          禁用按钮 'Disabled Touchable*',
         </Text>
         <TouchableDisabled />
       </ScrollView>
@@ -134,7 +132,7 @@ class TextOnPressBox extends React.Component {
         <Text
           style={styles.textBlock}
           onPress={this.textOnPress}>
-          Text has built-in onPress handling
+          文本是被构建在按压事件里 Text has built-in onPress handling
         </Text>
         <View style={styles.logBox}>
           <Text>
@@ -154,7 +152,8 @@ class TouchableFeedbackEvents extends React.Component {
   render() {
     console.log('TouchableFeedbackEvents 组件 this.state, this.props ：', this.state, this.props, )
     return (
-      <View testID="touchable_feedback_events">
+      <View>
+        <Text style={styles.text}> testID="touchable_feedback_events"</Text>
         <View style={[styles.row, {justifyContent: 'center'}]}>
           <TouchableOpacity
             style={styles.wrapper}
@@ -195,7 +194,8 @@ class TouchableDelayEvents extends React.Component {
   render() {
     console.log('TouchableDelayEvents 组件 this.state, this.props ：', this.state, this.props, )
     return (
-      <View testID="touchable_delay_events">
+      <View>
+        <Text style={styles.text}> testID="touchable_delay_events"</Text>
         <View style={[styles.row, {justifyContent: 'center'}]}>
           <TouchableOpacity
             style={styles.wrapper}
@@ -243,7 +243,8 @@ class ForceTouchExample extends React.Component {
   render() {
     console.log('ForceTouchExample 组件 this.state, this.props ：', this.state, this.props, )
     return (
-      <View testID="touchable_3dtouch_event">
+      <View>
+        <Text style={styles.text}> testID="touchable_3dtouch_event"</Text>
         <View style={styles.forceTouchBox} testID="touchable_3dtouch_output">
           <Text>{this._renderConsoleText()}</Text>
         </View>
@@ -285,7 +286,8 @@ class TouchableHitSlop extends React.Component {
     }
     console.log('TouchableHitSlop 组件 this.state, this.props ：', log, this.state, this.props, )
     return (
-      <View testID="touchable_hit_slop">
+      <View>
+        <Text style={styles.text}> testID="touchable_hit_slop"</Text>
         <View style={[styles.row, {justifyContent: 'center'}]}>
           <TouchableOpacity
             onPress={this.onPress}
@@ -293,7 +295,7 @@ class TouchableHitSlop extends React.Component {
             hitSlop={{top: 30, bottom: 30, left: 60, right: 60}}
             testID="touchable_hit_slop_button">
             <Text style={styles.hitSlopButton}>
-              Press Outside This View
+             在这个视图之外按压  Press Outside This View
             </Text>
           </TouchableOpacity>
          </View>
@@ -313,11 +315,11 @@ class TouchableDisabled extends React.Component {
     return (
       <View>
         <TouchableOpacity disabled={true} style={[styles.row, styles.block]}>
-          <Text style={styles.disabledButton}>Disabled TouchableOpacity</Text>
+          <Text style={styles.disabledButton}>禁用按钮 Disabled TouchableOpacity</Text>
         </TouchableOpacity>
 
         <TouchableOpacity disabled={false} style={[styles.row, styles.block]}>
-          <Text style={styles.button}>Enabled TouchableOpacity</Text>
+          <Text style={styles.button}>可以使用的按钮 Enabled TouchableOpacity</Text>
         </TouchableOpacity>
 
         <TouchableHighlight
@@ -328,7 +330,7 @@ class TouchableDisabled extends React.Component {
           style={[styles.row, styles.block]}
           onPress={() => console.log('custom THW text - highlight')}>
           <Text style={styles.disabledButton}>
-            Disabled TouchableHighlight
+            禁用的高亮按钮 Disabled TouchableHighlight
           </Text>
         </TouchableHighlight>
 
@@ -339,7 +341,7 @@ class TouchableDisabled extends React.Component {
           style={[styles.row, styles.block]}
           onPress={() => console.log('custom THW text - highlight')}>
           <Text style={styles.button}>
-            Enabled TouchableHighlight
+            可以使用的高亮按钮 Enabled TouchableHighlight
           </Text>
         </TouchableHighlight>
 
@@ -350,7 +352,7 @@ class TouchableDisabled extends React.Component {
             background={TouchableNativeFeedback.SelectableBackground()}>
             <View>
               <Text style={[styles.button, styles.nativeFeedbackButton]}>
-                Enabled TouchableNativeFeedback
+                可以使用的回馈按钮 Enabled TouchableNativeFeedback
               </Text>
             </View>
           </TouchableNativeFeedback>
@@ -364,7 +366,7 @@ class TouchableDisabled extends React.Component {
             background={TouchableNativeFeedback.SelectableBackground()}>
             <View>
               <Text style={[styles.disabledButton, styles.nativeFeedbackButton]}>
-                Disabled TouchableNativeFeedback
+                禁用回馈效果按钮 Disabled TouchableNativeFeedback
               </Text>
             </View>
           </TouchableNativeFeedback>

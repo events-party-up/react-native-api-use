@@ -156,15 +156,14 @@ export default class Demo extends React.Component {
         <View style={[styles.box, styles.border4]} />
 
         <Text style={styles.text}>
-
-          'Custom Borders'
+          自定义边框 ios 'Custom Borders'
           'border*Width & border*Color',
             platform: 'ios',
         </Text>
         <View style={[styles.box, styles.border5]} />
 
         <Text style={styles.text}>
-          'Custom Borders'
+          自定义边框 'Custom Borders'
           'border*Width & border*Color',
             platform: 'ios',
         </Text>

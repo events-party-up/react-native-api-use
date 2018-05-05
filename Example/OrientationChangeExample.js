@@ -39,7 +39,7 @@ class OrientationChangeExample extends React.Component {
     console.log('OrientationChangeExample 组件 this.state, this.props ：', this.state, this.props, )
     return (
       <View>
-        <Text>{JSON.stringify(this.state)}</Text>
+        <Text>是否横竖屏 {JSON.stringify(this.state)}</Text>
       </View>
     );
   }

@@ -1,4 +1,4 @@
-// Home.js
+// HomeScreen.js
 
 'use strict';
 
@@ -36,7 +36,7 @@ import MenuExample from './MenuExample';
 import DrawerExample from './DrawerExample';
 import ModalIndicatorExample from './ModalIndicatorExample';
 
-export default class Home extends NavigationPage {
+class HomeScreen extends NavigationPage {
 
   static defaultProps = {
     ...NavigationPage.defaultProps,
@@ -47,38 +47,160 @@ export default class Home extends NavigationPage {
     return (
       <ScrollView style={{flex: 1}}>
         <View style={{height: 20}} />
-        <ListRow title='Theme' detail='主题' onPress={() => this.navigator.push({view: <ThemeExample />})} topSeparator='full' />
-        <ListRow title='Label' detail='标签' onPress={() => this.navigator.push({view: <LabelExample />})} />
-        <ListRow title='Button' detail='按钮' onPress={() => this.navigator.push({view: <ButtonExample />})} />
-        <ListRow title='Checkbox' detail='复选框' onPress={() => this.navigator.push({view: <CheckboxExample />})} />
-        <ListRow title='Input' detail='输入框' onPress={() => this.navigator.push({view: <InputExample />})} />
-        <ListRow title='Select' detail='选择框' onPress={() => this.navigator.push({view: <SelectExample />})} />
-        <ListRow title='Stepper' detail='步进器' onPress={() => this.navigator.push({view: <StepperExample />})} />
-        <ListRow title='SearchInput' detail='搜索输入框' onPress={() => this.navigator.push({view: <SearchInputExample />})} />
-        <ListRow title='Badge' detail='徽章' onPress={() => this.navigator.push({view: <BadgeExample />})} />
-        <ListRow title='Popover' detail='气泡' onPress={() => this.navigator.push({view: <PopoverExample />})} />
-        <ListRow title='NavigationBar' detail='导航栏' onPress={() => this.navigator.push({view: <NavigationBarExample />})} />
-        <ListRow title='ListRow' detail='列表行' onPress={() => this.navigator.push({view: <ListRowExample />})} />
-        <ListRow title='Carousel' detail='走马灯' onPress={() => this.navigator.push({view: <CarouselExample />})} />
-        <ListRow title='Projector' detail='幻灯机' onPress={() => this.navigator.push({view: <ProjectorExample />})} />
-        <ListRow title='SegmentedBar' detail='分段工具条' onPress={() => this.navigator.push({view: <SegmentedBarExample />})} />
-        <ListRow title='SegmentedView' detail='分段器' onPress={() => this.navigator.push({view: <SegmentedViewExample />})} />
-        <ListRow title='TabView' detail='标签页' onPress={() => this.navigator.push({view: <TabViewExample />})} />
-        <ListRow title='TransformView' detail='可变视图' onPress={() => this.navigator.push({view: <TransformViewExample />})} />
-        <ListRow title='AlbumView' detail='相册视图' onPress={() => this.navigator.push({view: <AlbumViewExample />})} />
-        <ListRow title='Wheel' detail='滚轮' onPress={() => this.navigator.push({view: <WheelExample />})} />
-        <ListRow title='Overlay' detail='浮层' onPress={() => this.navigator.push({view: <OverlayExample />})} />
-        <ListRow title='Toast' detail='轻提示' onPress={() => this.navigator.push({view: <ToastExample />})} />
-        <ListRow title='ActionSheet' detail='操作选单' onPress={() => this.navigator.push({view: <ActionSheetExample />})} />
-        <ListRow title='ActionPopover' detail='操作气泡' onPress={() => this.navigator.push({view: <ActionPopoverExample />})} />
-        <ListRow title='PullPicker' detail='上拉选择器' onPress={() => this.navigator.push({view: <PullPickerExample />})} />
-        <ListRow title='PopoverPicker' detail='气泡选择器' onPress={() => this.navigator.push({view: <PopoverPickerExample />})} />
-        <ListRow title='Menu' detail='菜单' onPress={() => this.navigator.push({view: <MenuExample />})} />
-        <ListRow title='Drawer' detail='抽屉' onPress={() => this.navigator.push({view: <DrawerExample />})} />
-        <ListRow title='ModalIndicator' detail='模态指示器' onPress={() => this.navigator.push({view: <ModalIndicatorExample />})} bottomSeparator='full' />
+        <ListRow title='Theme' detail='主题' onPress={() => this.navigation.navigate('ThemeExample')} topSeparator='full' />
+        <ListRow title='Label' detail='标签' onPress={() => this.navigation.navigate('LabelExample')} />
+        <ListRow title='Button' detail='按钮' onPress={() => this.navigation.navigate('ButtonExample')} />
+        <ListRow title='Checkbox' detail='复选框' onPress={() => this.navigation.navigate('CheckboxExample')} />
+        <ListRow title='Input' detail='输入框' onPress={() => this.navigation.navigate('InputExample')} />
+        <ListRow title='Select' detail='选择框' onPress={() => this.navigation.navigate('SelectExample')} />
+        <ListRow title='Stepper' detail='步进器' onPress={() => this.navigation.navigate('StepperExample')} />
+        <ListRow title='SearchInput' detail='搜索输入框' onPress={() => this.navigation.navigate('SearchInputExample')} />
+        <ListRow title='Badge' detail='徽章' onPress={() => this.navigation.navigate('BadgeExample')} />
+        <ListRow title='Popover' detail='气泡' onPress={() => this.navigation.navigate('PopoverExample')} />
+        <ListRow title='NavigationBar' detail='导航栏' onPress={() => this.navigation.navigate('NavigationBarExample')} />
+        <ListRow title='ListRow' detail='列表行' onPress={() => this.navigation.navigate('ListRowExample')} />
+        <ListRow title='Carousel' detail='走马灯' onPress={() => this.navigation.navigate('CarouselExample')} />
+        <ListRow title='Projector' detail='幻灯机' onPress={() => this.navigation.navigate('ProjectorExample')} />
+        <ListRow title='SegmentedBar' detail='分段工具条' onPress={() => this.navigation.navigate('SegmentedBarExample')} />
+        <ListRow title='SegmentedView' detail='分段器' onPress={() => this.navigation.navigate('SegmentedViewExample')} />
+        <ListRow title='TabView' detail='标签页' onPress={() => this.navigation.navigate('TabViewExample')} />
+        <ListRow title='TransformView' detail='可变视图' onPress={() => this.navigation.navigate('TransformViewExample')} />
+        <ListRow title='AlbumView' detail='相册视图' onPress={() => this.navigation.navigate('AlbumViewExample')} />
+        <ListRow title='Wheel' detail='滚轮' onPress={() => this.navigation.navigate('WheelExample')} />
+        <ListRow title='Overlay' detail='浮层' onPress={() => this.navigation.navigate('OverlayExample')} />
+        <ListRow title='Toast' detail='轻提示' onPress={() => this.navigation.navigate('ToastExample')} />
+        <ListRow title='ActionSheet' detail='操作选单' onPress={() => this.navigation.navigate('ActionSheetExample')} />
+        <ListRow title='ActionPopover' detail='操作气泡' onPress={() => this.navigation.navigate('ActionPopoverExample')} />
+        <ListRow title='PullPicker' detail='上拉选择器' onPress={() => this.navigation.navigate('PullPickerExample')} />
+        <ListRow title='PopoverPicker' detail='气泡选择器' onPress={() => this.navigation.navigate('PopoverPickerExample')} />
+        <ListRow title='Menu' detail='菜单' onPress={() => this.navigation.navigate('MenuExample')} />
+        <ListRow title='Drawer' detail='抽屉' onPress={() => this.navigation.navigate('DrawerExample')} />
+        <ListRow title='ModalIndicator' detail='模态指示器' onPress={() => this.navigation.navigate('ModalIndicatorExample')} bottomSeparator='full' />
         <View style={{height: Theme.screenInset.bottom}} />
       </ScrollView>
     );
   }
 
 }
+
+const App = StackNavigator({
+  ThemeExample: {
+    screen: ThemeExample,
+    navigationOptions: {header: null,},
+  },
+  LabelExample: {
+    screen: LabelExample,
+    navigationOptions: {header: null,},
+  },
+  ButtonExample: {
+    screen: ButtonExample,
+    navigationOptions: {header: null,},
+  },
+  CheckboxExample: {
+    screen: CheckboxExample,
+    navigationOptions: {header: null,},
+  },
+  InputExample: {
+    screen: InputExample,
+    navigationOptions: {header: null,},
+  },
+  SelectExample: {
+    screen: SelectExample,
+    navigationOptions: {header: null,},
+  },
+  StepperExample: {
+    screen: StepperExample,
+    navigationOptions: {header: null,},
+  },
+  SearchInputExample: {
+    screen: SearchInputExample,
+    navigationOptions: {header: null,},
+  },
+  BadgeExample: {
+    screen: BadgeExample,
+    navigationOptions: {header: null,},
+  },
+  PopoverExample: {
+    screen: PopoverExample,
+    navigationOptions: {header: null,},
+  },
+  NavigationBarExample: {
+    screen: NavigationBarExample,
+    navigationOptions: {header: null,},
+  },
+  ListRowExample: {
+    screen: ListRowExample,
+    navigationOptions: {header: null,},
+  },
+  CarouselExample: {
+    screen: CarouselExample,
+    navigationOptions: {header: null,},
+  },
+  ProjectorExample: {
+    screen: ProjectorExample,
+    navigationOptions: {header: null,},
+  },
+  SegmentedBarExample: {
+    screen: SegmentedBarExample,
+    navigationOptions: {header: null,},
+  },
+  SegmentedViewExample: {
+    screen: SegmentedViewExample,
+    navigationOptions: {header: null,},
+  },
+  TabViewExample: {
+    screen: TabViewExample,
+    navigationOptions: {header: null,},
+  },
+  TransformViewExample: {
+    screen: TransformViewExample,
+    navigationOptions: {header: null,},
+  },
+  AlbumViewExample: {
+    screen: AlbumViewExample,
+    navigationOptions: {header: null,},
+  },
+  WheelExample: {
+    screen: WheelExample,
+    navigationOptions: {header: null,},
+  },
+  OverlayExample: {
+    screen: OverlayExample,
+    navigationOptions: {header: null,},
+  },
+  ToastExample: {
+    screen: ToastExample,
+    navigationOptions: {header: null,},
+  },
+  ActionSheetExample: {
+    screen: ActionSheetExample,
+    navigationOptions: {header: null,},
+  },
+  ActionPopoverExample: {
+    screen: ActionPopoverExample,
+    navigationOptions: {header: null,},
+  },
+  PullPickerExample: {
+    screen: PullPickerExample,
+    navigationOptions: {header: null,},
+  },
+  PopoverPickerExample: {
+    screen: PopoverPickerExample,
+    navigationOptions: {header: null,},
+  },
+  MenuExample: {
+    screen: MenuExample,
+    navigationOptions: {header: null,},
+  },
+  DrawerExample: {
+    screen: DrawerExample,
+    navigationOptions: {header: null,},
+  },
+  ModalIndicatorExample: {
+    screen: ModalIndicatorExample,
+    navigationOptions: {header: null,},
+  },
+},
+  // config
+);
+export default App

@@ -39,14 +39,14 @@ export default class TimePickerAndroidExample extends React.Component {
     return (
       <View>
         <View>
-          <Text style={styles.text}> title="Simple time picker"</Text>
+          <Text style={styles.text}>简单的时间选择器 title="Simple time picker"</Text>
           <TouchableOpacity
             onPress={this.showPicker.bind(this, 'simple', {})}>
             <Text style={styles.text}>{this.state.simpleText}</Text>
           </TouchableOpacity>
         </View>
         <View>
-          <Text style={styles.text}> title="Time picker with pre-set time"</Text>
+          <Text style={styles.text}>带有预选选择时间的选择器 title="Time picker with pre-set time"</Text>
           <TouchableOpacity
             onPress={this.showPicker.bind(this, 'preset', {
               hour: this.state.presetHour,
@@ -57,7 +57,7 @@ export default class TimePickerAndroidExample extends React.Component {
         </View>
 
         <View>
-          <Text style={styles.text}> title="Time picker with 24-hour time format"</Text>
+          <Text style={styles.text}>时间选择器的带有24小时格式化 title="Time picker with 24-hour time format"</Text>
           <TouchableOpacity
             onPress={this.showPicker.bind(this, 'isoFormat', {
               hour: this.state.isoFormatHour,

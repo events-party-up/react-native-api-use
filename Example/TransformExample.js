@@ -38,7 +38,7 @@ class Flip extends React.Component {
             })},
           ]}]}>
           <Text style={styles.flipText}>
-            This text is flipping great.
+            带有会弹效果的文本 This text is flipping great.
           </Text>
         </Animated.View>
         <Animated.View style={[styles.flipCard, {
@@ -53,7 +53,7 @@ class Flip extends React.Component {
             })},
           ]}]}>
           <Text style={styles.flipText}>
-            On the flip side...
+            在这个会弹的侧边 On the flip side...
           </Text>
         </Animated.View>
       </View>
@@ -196,60 +196,54 @@ export default class Demo extends React.Component {
     return (
       <ScrollView style={styles.container}>
         <Text style={styles.text}>
-          'Perspective, Rotate, Animation',
+          远景 旋转 动画 'Perspective, Rotate, Animation',
         </Text>
         <Flip />
 
         <Text style={styles.text}>
-          'Translate, Rotate, Scale'
+          过渡 旋转 缩放 'Translate, Rotate, Scale'
         </Text>
         <View style={styles.container}>
           <View style={styles.box1} />
         </View>
 
-        
         <Text style={styles.text}>
-          'Scale, Translate, Rotate, ',
+          缩放 过渡 旋转 'Scale, Translate, Rotate, ',
         </Text>
         <View style={styles.container}>
           <View style={styles.box2} />
         </View>
-
         
         <Text style={styles.text}>
-          'Rotate',
+          旋转 'Rotate',
         </Text>
         <View style={styles.container}>
           <View style={styles.box3step1} />
         </View>
-
         
         <Text style={styles.text}>
-          'Rotate, Scale',
+          旋转 缩放 'Rotate, Scale',
         </Text>
         <View style={styles.container}>
           <View style={styles.box3step2} />
         </View>
-
         
         <Text style={styles.text}>
-          'Rotate, Scale, Translate ',
+          旋转 缩放 过渡 'Rotate, Scale, Translate ',
         </Text>
         <View style={styles.container}>
           <View style={styles.box3step3} />
         </View>
 
-        
         <Text style={styles.text}>
-          'Translate, Scale, Rotate',
+          过渡 缩放 旋转 'Translate, Scale, Rotate',
         </Text>
         <View style={styles.container}>
           <View style={styles.box4} />
         </View>
 
-        
         <Text style={styles.text}>
-          'Translate, Rotate, Scale',
+          过渡 旋转 缩放 'Translate, Rotate, Scale',
         </Text>
         <View style={styles.container}>
           <View style={[styles.box5, styles.box5Transform]} />

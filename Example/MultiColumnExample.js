@@ -36,7 +36,7 @@ export default class MultiColumnExample extends React.Component {
     this.setState(() => ({numColumns: Number(numColumns)}));
   };
   render() {
-    const filterRegex = new RegExp(String(this.state.filterText), 'i');
+    const filterRegex = new RegExp(this.state.filterText, 'i');
     const filter = (item) => (filterRegex.test(item.text) || filterRegex.test(item.title));
     const filteredData = this.state.data.filter(filter);
     console.log('MultiColumnExample 组件 this.state, this.props ：', genItemData(1000), this.state, this.props, )
@@ -53,7 +53,7 @@ export default class MultiColumnExample extends React.Component {
             <TextInput
               clearButtonMode="never"
               onChangeText={this._onChangeNumColumns}
-              value={this.state.numColumns ? String(this.state.numColumns) : ''}
+              value={this.state.numColumns ? this.state.numColumns : ''}
             />
           </View>
           <View style={styles.row}>

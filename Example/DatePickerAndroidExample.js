@@ -48,38 +48,44 @@ export default class DatePickerAndroidExample extends React.Component {
   render() {
     console.log('DatePickerAndroidExample 组件 this.state, this.props ：', this.state, this.props, )
     return (
-      <View title="DatePickerAndroid">
-        <View title="Simple date picker">
+      <View>
+        <View>
+          <Text style={styles.text}>最简单的日期选择器 title="Simple date picker"</Text>
           <TouchableOpacity
             onPress={this.showPicker.bind(this, 'simple', {date: this.state.simpleDate})}>
             <Text style={styles.text}>{this.state.simpleText}</Text>
           </TouchableOpacity>
         </View>
-        <View title="Simple spinner date picker">
+        <View>
+          <Text style={styles.text}>带有加载器的选择器 title="Simple spinner date picker"</Text>
           <TouchableOpacity
             onPress={this.showPicker.bind(this, 'spinner', {date: this.state.spinnerDate, mode: 'spinner'})}>
             <Text style={styles.text}>{this.state.spinnerText}</Text>
           </TouchableOpacity>
         </View>
-        <View title="Simple calendar date picker">
+        <View>
+          <Text style={styles.text}>简单的日历选择器 title="Simple calendar date picker"</Text>
           <TouchableOpacity
             onPress={this.showPicker.bind(this, 'calendar', {date: this.state.calendarDate, mode: 'calendar'})}>
             <Text style={styles.text}>{this.state.calendarText}</Text>
           </TouchableOpacity>
         </View>
-        <View title="Simple default date picker">
+        <View>
+          <Text style={styles.text}>带有默认值的选择器 title="Simple default date picker"</Text>
           <TouchableOpacity
             onPress={this.showPicker.bind(this, 'default', {date: this.state.defaultDate, mode: 'default'})}>
             <Text style={styles.text}>{this.state.defaultText}</Text>
           </TouchableOpacity>
         </View>
-        <View title="Date picker with pre-set date">
+        <View>
+          <Text style={styles.text}>带有预设值的选择器  title="Date picker with pre-set date"</Text>
           <TouchableOpacity
             onPress={this.showPicker.bind(this, 'preset', {date: this.state.presetDate})}>
             <Text style={styles.text}>{this.state.presetText}</Text>
           </TouchableOpacity>
         </View>
-        <View title="Date picker with minDate">
+        <View>
+          <Text style={styles.text}>带有最小选择日期的选自器 title="Date picker with minDate"</Text>
           <TouchableOpacity
             onPress={this.showPicker.bind(this, 'min', {
               date: this.state.minDate,
@@ -88,7 +94,8 @@ export default class DatePickerAndroidExample extends React.Component {
             <Text style={styles.text}>{this.state.minText}</Text>
           </TouchableOpacity>
         </View>
-        <View title="Date picker with maxDate">
+        <View>
+          <Text style={styles.text}>带有最大选择日期的选择器 title="Date picker with maxDate"</Text>
           <TouchableOpacity
             onPress={this.showPicker.bind(this, 'max', {
               date: this.state.maxDate,
@@ -97,7 +104,8 @@ export default class DatePickerAndroidExample extends React.Component {
             <Text style={styles.text}>{this.state.maxText}</Text>
           </TouchableOpacity>
         </View>
-        <View title="Date picker with all options">
+        <View>
+          <Text style={styles.text}>带有所有配置的选择器 title="Date picker with all options"</Text>
           <TouchableOpacity
             onPress={this.showPicker.bind(this, 'all', {
               date: this.state.allDate,

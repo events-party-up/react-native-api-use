@@ -190,7 +190,7 @@ class RTLExample extends React.Component {
                   style={styles.image}
                 />
                 <Text style={styles.fontSizeExtraSmall}>
-                  Without directional meaning
+                  不定向指明 Without directional meaning
                 </Text>
               </View>
               <View style={styles.rightAlignStyle}>
@@ -199,7 +199,7 @@ class RTLExample extends React.Component {
                   style={[styles.image, styles.withRTLStyle]}
                 />
                 <Text style={styles.fontSizeExtraSmall}>
-                  With directional meaning
+                  定向指明 With directional meaning
                 </Text>
               </View>
             </View>

@@ -31,6 +31,7 @@ class ViewBorderStyleExample extends React.Component {
     console.log('ViewBorderStyleExample 组件 this.state, this.props ：', this.state, this.props, )
     return (
       <TouchableOpacity onPress={this._handlePress}>
+        <Text style={styles.text}>视图边框样式</Text>
         <View>
           <View style={{
             borderWidth: 1,
@@ -38,7 +39,7 @@ class ViewBorderStyleExample extends React.Component {
             padding: 5
           }}>
             <Text style={{fontSize: 11}}>
-              Dashed border style
+              虚线的边框 Dashed border style
             </Text>
           </View>
           <View style={{
@@ -49,7 +50,7 @@ class ViewBorderStyleExample extends React.Component {
             padding: 5
           }}>
             <Text style={{fontSize: 11}}>
-              Dotted border style
+              点状边框样式 Dotted border style
             </Text>
           </View>
         </View>
@@ -74,7 +75,7 @@ class ZIndexExample extends React.Component {
     return (
       <TouchableOpacity onPress={this._handlePress}>
         <View>
-          <Text style={{paddingBottom: 10}}>Tap to flip sorting order</Text>
+          <Text style={{paddingBottom: 10}}>层级例子 点击改变顺序 Tap to flip sorting order</Text>
           <View style={[
             styles.zIndex,
             {marginTop: 0, backgroundColor: '#E57373', zIndex: indices[0]}
@@ -120,19 +121,19 @@ export default class Demo extends React.Component {
     console.log('Demo 组件 this.state, this.props ：', this.state, this.props, )
     return (
       <ScrollView style={styles.container}>
-        <Text style={styles.text}>'Background Color',</Text>
+        <Text style={styles.text}>背景色 'Background Color',</Text>
         <View style={{backgroundColor: '#527FE4', padding: 5}}>
           <Text style={{fontSize: 11}}>
             Blue background
           </Text>
         </View>
 
-        <Text style={styles.text}>'Border',</Text>
+        <Text style={styles.text}>边框 'Border',</Text>
         <View style={{borderColor: '#527FE4', borderWidth: 5, padding: 10}}>
           <Text style={{fontSize: 11}}>5px blue border</Text>
         </View>
 
-        <Text style={styles.text}>'Padding/Margin',</Text>
+        <Text style={styles.text}>内衬 边距'Padding/Margin',</Text>
         <View style={{borderColor: '#bb0000', borderWidth: 0.5}}>
           <View style={[styles.box, {padding: 5}]}>
             <Text style={{fontSize: 11}}>5px padding</Text>
@@ -150,7 +151,7 @@ export default class Demo extends React.Component {
           </View>
         </View>
 
-        <Text style={styles.text}>'Border Radius',</Text>
+        <Text style={styles.text}>圆角 'Border Radius',</Text>
         <View style={{borderWidth: 0.5, borderRadius: 5, padding: 5}}>
           <Text style={{fontSize: 11}}>
             Too much use of `borderRadius` (especially large radii) on
@@ -159,13 +160,13 @@ export default class Demo extends React.Component {
           </Text>
         </View>
 
-        <Text style={styles.text}>'Border Style',</Text>
+        <Text style={styles.text}>边框样式 'Border Style',</Text>
         <ViewBorderStyleExample />
 
-        <Text style={styles.text}>'Circle with Border Radius',</Text>
+        <Text style={styles.text}>带有圆角的圆圈 'Circle with Border Radius',</Text>
         <View style={{borderRadius: 10, borderWidth: 1, width: 20, height: 20}} />
 
-        <Text style={styles.text}>'Overflow',</Text>
+        <Text style={styles.text}>溢出 'Overflow',</Text>
         <View style={{flexDirection: 'row'}}>
           <View
             style={{
@@ -177,17 +178,17 @@ export default class Demo extends React.Component {
               borderWidth: 0.5,
             }}>
             <View style={{width: 200, height: 20}}>
-              <Text>Overflow hidden</Text>
+              <Text>溢出隐藏 Overflow hidden</Text>
             </View>
           </View>
           <View style={{width: 95, height: 10, marginBottom: 5, borderWidth: 0.5}}>
             <View style={{width: 200, height: 20}}>
-              <Text>Overflow visible</Text>
+              <Text>溢出可见 Overflow visible</Text>
             </View>
           </View>
         </View>
 
-        <Text style={styles.text}>'Opacity',</Text>
+        <Text style={styles.text}>透明度 'Opacity',</Text>
         <View>
           <View style={{opacity: 0}}><Text>Opacity 0</Text></View>
           <View style={{opacity: 0.1}}><Text>Opacity 0.1</Text></View>
@@ -198,7 +199,7 @@ export default class Demo extends React.Component {
           <View style={{opacity: 1}}><Text>Opacity 1</Text></View>
         </View>
 
-        <Text style={styles.text}>'ZIndex',</Text>
+        <Text style={styles.text}>层级 'ZIndex',</Text>
         <ZIndexExample />
  
       </ScrollView>

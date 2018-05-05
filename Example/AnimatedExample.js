@@ -66,7 +66,7 @@ export default class Home extends React.Component {
       'ordered set of transforms.  Each transform has ' +
       'an interpolation to convert the value into the ' +
       'right range and units.</Text>
-        <Text style={styles.text}onPress={() => {
+        <Text style={styles.text} onPress={() => {
             this.setState((state) => (
               {show: !state.show}
             ));
@@ -76,7 +76,7 @@ export default class Home extends React.Component {
         </Text>
         {this.state.show && <FadeInView>
             <View style={styles.content}>
-              <Text>FadeInView</Text>
+              <Text>淡入视图 FadeInView</Text>
             </View>
           </FadeInView>
         }
@@ -88,7 +88,7 @@ export default class Home extends React.Component {
               tension: -10, // Slow
               friction: 1,  // Oscillate a lot
             }).start(); }}>
-            Press to Fling it!
+            按压来抛他 Press to Fling it!
           </Text>
           <Animated.View
             style={[styles.content, {
