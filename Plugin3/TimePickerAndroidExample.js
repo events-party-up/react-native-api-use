@@ -10,11 +10,11 @@ import {
 
 export default class TimePickerAndroidExample extends React.Component {
   state = {
-    isoFormatText: 'pick a time (24-hour format)',
+    isoFormatText: '选择一个时间 24小时格式 pick a time (24-hour format)',
     presetHour: 4,
     presetMinute: 4,
-    presetText: 'pick a time, default: 4:04AM',
-    simpleText: 'pick a time',
+    presetText: '选择一个时间 带有默认时间 pick a time, default: 4:04AM',
+    simpleText: '选择一个时间 pickpick a time',
   };
 
   showPicker = async (stateKey, options) => {
