@@ -48,6 +48,7 @@ export default class TabDemo extends Component {
   };
 
   render() {
+    console.log('TabDemo 组件 this.state, this.props ：', this.state, this.props, )
     return (
       <TabNavigator style={styles.container}>
         <TabNavigator.Item

@@ -35,6 +35,7 @@ export default class Sample2 extends React.Component {
     }
   }
   render() {
+    console.log('Sample2 组件 this.state, this.props ：', this.state, this.props, )
     return (
       <View style={styles.container}>
       <WebViewBridge

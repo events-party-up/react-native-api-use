@@ -7,6 +7,9 @@ import {
   View,
 } from 'react-native'
 
+import TabNavigator from 'react-native-tab-navigator';
+
+
 // animated bool 
 // 指定状态栏的变化是否应以动画形式呈现。
 // 目前支持这几种样式：backgroundColor, barStyle和hidden。
@@ -464,7 +467,73 @@ class StatusBarStaticAndroidExample extends React.Component {
 // export default StatusBarStaticIOSExample
 export default StatusBarStaticAndroidExample
 
+const tabConfig = [
+  {com: StatusBarsDemo, selectTab: 'StatusBarsDemo', txt: 'StatusBarsDemo', icon: require('../../../res/img/ic_trending.png'), },
+  {com: StatusBarHiddenExample, selectTab: 'StatusBarHiddenExample', txt: 'StatusBarHiddenExample', icon: require('../../../res/img/ic_trending.png'), },
+  {com: StatusBarStyleExample, selectTab: 'StatusBarStyleExample', txt: 'StatusBarStyleExample', icon: require('../../../res/img/ic_trending.png'), },
+  {com: StatusBarNetworkActivityExample, selectTab: 'StatusBarNetworkActivityExample', txt: 'StatusBarNetworkActivityExample', icon: require('../../../res/img/ic_trending.png'), },
+  {com: StatusBarBackgroundColorExample, selectTab: 'StatusBarBackgroundColorExample', txt: 'StatusBarBackgroundColorExample', icon: require('../../../res/img/ic_trending.png'), },
+  {com: StatusBarTranslucentExample, selectTab: 'StatusBarTranslucentExample', txt: 'StatusBarTranslucentExample', icon: require('../../../res/img/ic_trending.png'), },
+  {com: StatusBarStaticAndroidExample, selectTab: 'StatusBarStaticAndroidExample', txt: 'StatusBarStaticAndroidExample', icon: require('../../../res/img/ic_trending.png'), },
+]
+
+export default class HomePage extends Component {
+  constructor(props){
+    super(props)
+    console.log('HomePage构造函数 ：', this.props);
+    const selectedTab = 'StatusBarsDemo'
+    this.state = {
+      selectedTab,
+    }
+  }
+  navigate = (selectedTab) => {
+    console.log('selectedTab ：', selectedTab, this.props, );
+    this.setState({ selectedTab: 'tb_popular' })
+  }
+  _renderTab = (Component, selectTab, title, renderIcon, key) => {
+    // console.log('Component, selectTab, title, renderIcon ：', Component, selectTab, title, renderIcon);
+     return (
+      <TabNavigator.Item
+        key={selectTab}
+        selected={this.state.selectedTab === selectTab}
+        title={title}
+        // selectedTitleStyle={'deepskyblue'}
+        renderIcon={() => <Image style={styles.image} source={renderIcon} />}
+        renderSelectedIcon={() => <Image style={[styles.image, ]} source={renderIcon} />}
+        badgeText="1"
+        onPress={() => this.setState({ selectedTab: selectTab })}>
+
+        <Component {...this.props}></Component>
+      </TabNavigator.Item>
+     )
+   }
+  render() {
+    console.log('HomePage 组件 ：', this.state, this.props)
+    return (
+      <View style={styles.container}>
+        <TabNavigator>
+          { tabConfig.map((v, i) => this._renderTab(v.com, v.selectTab, v.txt, v.icon, i)) }
+        </TabNavigator>
+      </View>
+    );
+  }
+}
+
+
+
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    backgroundColor: '#f5fcff',
+  },
+  image: {
+    width: 22,
+    height: 22,
+  },
+
+
   wrapper: {
     borderRadius: 5,
     marginBottom: 5,

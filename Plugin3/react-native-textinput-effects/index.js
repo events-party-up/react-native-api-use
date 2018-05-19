@@ -15,6 +15,7 @@ class App extends React.Component {
       setTimeout(() => this.refs.slot.spinTo('prize'), 12000);
   }
   render() {
+      console.log('App 组件 this.state, this.props ：', this.state, this.props, )
       const symbols = ['🍏', '🍎', '🍐', '🍊', '🍋', '🍌']; // can't use emojies in SlotMachine because some of them are comprised of 2 chars
       return (
           <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>

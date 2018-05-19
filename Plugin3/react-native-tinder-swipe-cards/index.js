@@ -8,7 +8,6 @@ class Card extends React.Component {
   constructor(props) {
     super(props);
   }
-
   render() {
     return (
       <View style={styles.card}>
@@ -23,7 +22,6 @@ class NoMoreCards extends React.Component {
   constructor(props) {
     super(props);
   }
-
   render() {
     return (
       <View style={styles.noMoreCards}>
@@ -60,37 +58,30 @@ export default class App extends React.Component {
       outOfCards: false
     }
   }
-
   handleYup (card) {
     console.log("yup")
   }
-
   handleNope (card) {
     console.log("nope")
   }
 
   cardRemoved (index) {
     console.log(`The index is ${index}`);
-
     let CARD_REFRESH_LIMIT = 3
-
     if (this.state.cards.length - index <= CARD_REFRESH_LIMIT + 1) {
       console.log(`There are only ${this.state.cards.length - index - 1} cards left.`);
-
       if (!this.state.outOfCards) {
         console.log(`Adding ${cards2.length} more cards`)
-
         this.setState({
           cards: this.state.cards.concat(cards2),
           outOfCards: true
         })
       }
-
     }
-
   }
 
   render() {
+    console.log('App 组件 this.state, this.props ：', this.state, this.props, )
     return (
       <SwipeCards
         cards={this.state.cards}

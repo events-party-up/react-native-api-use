@@ -163,6 +163,7 @@ export default class IconSetsList extends PureComponent {
   }
 
   render() {
+    console.log('IconSetsList 组件 this.state, this.props ：', this.state, this.props, )
     return (
       <ListView
         dataSource={this.state.dataSource}

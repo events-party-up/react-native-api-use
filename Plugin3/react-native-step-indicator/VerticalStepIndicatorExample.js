@@ -25,10 +25,8 @@ const stepIndicatorStyles = {
 }
 
 export default class VerticalStepIndicator extends Component {
-
   constructor() {
     super();
-
     this.state = {
       currentPage:0
     };

@@ -13,7 +13,7 @@ import {
 
 import Video from 'react-native-video';
 
-class VideoPlayer extends Component {
+export default class VideoPlayer extends Component {
 
   state = {
     rate: 1,
@@ -24,8 +24,6 @@ class VideoPlayer extends Component {
     currentTime: 0.0,
     paused: true,
   };
-
-  video: Video;
 
   onLoad = (data) => {
     this.setState({ duration: data.duration });
@@ -44,11 +42,13 @@ class VideoPlayer extends Component {
     this.setState({ paused: true })
   };
 
-  onAudioFocusChanged = (event: { hasAudioFocus: boolean }) => {
+  onAudioFocusChanged = (hasAudioFocus) => {
+    console.log('onAudioFocusChanged ：', hasAudioFocus);
     this.setState({ paused: !event.hasAudioFocus })
   };
 
   getCurrentTimePercentage() {
+    console.log('getCurrentTimePercentage ：', )
     if (this.state.currentTime > 0) {
       return parseFloat(this.state.currentTime) / parseFloat(this.state.duration);
     }
@@ -94,7 +94,7 @@ class VideoPlayer extends Component {
   render() {
     const flexCompleted = this.getCurrentTimePercentage() * 100;
     const flexRemaining = (1 - this.getCurrentTimePercentage()) * 100;
-
+    console.log('VideoPlayer 组件 this.state, this.props ：', this.state, this.props, )
     return (
       <View style={styles.container}>
         <TouchableOpacity
@@ -155,7 +155,6 @@ class VideoPlayer extends Component {
     );
   }
 }
-
 
 const styles = StyleSheet.create({
   container: {

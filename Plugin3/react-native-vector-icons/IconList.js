@@ -105,6 +105,7 @@ export default class IconList extends PureComponent {
   }
 
   render() {
+    console.log('IconList 组件 this.state, this.props ：', this.state, this.props, )
     return (
       <View style={styles.container}>
         {Platform.OS !== 'osx' && (

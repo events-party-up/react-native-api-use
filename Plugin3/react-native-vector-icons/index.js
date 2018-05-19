@@ -5,6 +5,7 @@ import {
   StyleSheet,
   ToolbarAndroid,
   View,
+  ScrollView
 } from 'react-native';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -33,6 +34,7 @@ BackAndroid.addEventListener('hardwareBackPress', () => {
 });
 
 function RouteMapper(route, navigationOperations, onComponentRef) {
+  console.log('RouteMapper 组件 this.state, this.props ：', this.state, this.props, )
   _navigator = navigationOperations;
   if (route.name === 'list') {
     return (
@@ -71,11 +73,9 @@ function IconExplorer(props) {
   };
 
   return (
-    <Navigator
-      style={styles.container}
-      initialRoute={initialRoute}
-      configureScene={() => Navigator.SceneConfigs.FadeAndroid}
-      renderScene={RouteMapper}
-    />
+    <ScrollView>
+    </ScrollView>
   );
 }
+
+export default IconExplorer
