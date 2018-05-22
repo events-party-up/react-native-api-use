@@ -74,25 +74,38 @@ class ScrollViewContainer extends React.Component {
           removeClippedSubviews={true}
 
           showsHorizontalScrollIndicator={true}
-          showsHorizontalScrollIndicator={false}
+          //showsHorizontalScrollIndicator={false}
 
           showsVerticalScrollIndicator={true}
-          showsVerticalScrollIndicator={false}
+          //showsVerticalScrollIndicator={false}
+
+          horizontal={true}
+          //horizontal={false}
+
+          // 有时候滚动视图会占据比实际内容更多的空间。这种情况下可以使用此属性，指定以某种颜色来填充多余的空间，以避免设置背景和创建不必要的绘制开销。一般情况下并不需要这种高级优化技巧。
+          endFillColor={'red'}
+
+          // 覆盖默认的overScroll模式, 可选的值有：
+          // 'auto' - 默认值，允许用户在内容超出视图高度之后可以滚动视图。
+          // 'always' - 无论内容尺寸，用户始终可以滚动视图。
+          // 'never' - 始终不允许用户滚动视图。
+          overScrollMode={'auto'}
+          // overScrollMode={'always'}
+          // overScrollMode={'never'}
 
           // 
+          scrollPerfTag={}
 
+          // 当值为true时，滚动条会停在滚动视图的尺寸的整数倍位置。这个可以用在水平分页上。默认值为false。
+          pagingEnabled={true}
+          // pagingEnabled={false}
 
-          // 
+          // 当值为false的时候，内容不能滚动，默认值为true。
+          scrollEnabled={true}
+          // scrollEnabled={false}
 
-
-          // 
-
-
-          // 
-
-
-          // 
-
+          // 一个子视图下标的数组，用于决定哪些成员会在滚动之后固定在屏幕顶端。举个例子，传递stickyHeaderIndices={[0]}会让第一个成员固定在滚动视图顶端。这个属性不能和horizontal={true}一起使用。
+          stickyHeaderIndices={2}
         >
           {THUMBS.map(createThumbRow)}
         </ScrollView>

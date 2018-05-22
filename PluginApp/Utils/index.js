@@ -95,3 +95,17 @@ export const AsyncClear = (key, cb) => {
     cb(!err)
   })
 }
+
+// 批量产生 css样式
+export const createStyle = (styleArr, numArr) => {
+  console.log('prefix, suffix ：', styleArr, numArr, );
+  const obj = {}
+  styleArr.forEach(v => {
+    numArr.forEach(num => {
+      obj[`${v.key}${num}`] = {
+        [v.prefix]: num,
+      }
+    })
+  })
+  return obj
+}
