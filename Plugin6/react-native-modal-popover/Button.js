@@ -1,0 +1,25 @@
+import React from 'react';
+import { StyleSheet, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+
+const styles = StyleSheet.create({
+  button: {
+    padding: 8,
+    backgroundColor: '#3b5998',
+    borderRadius: 4,
+  },
+});
+
+class Button extends React.PureComponent {
+  render() {
+    const { icon, onPress, onLayout } = this.props;
+    console.log('Button 组件 this.state, this.props ：', this.state, this.props, )
+    return (
+      <TouchableOpacity onPress={onPress} style={styles.button} onLayout={onLayout}>
+        <Icon name={icon} color="white" />
+      </TouchableOpacity>
+    );
+  }
+}
+
+export default Button;

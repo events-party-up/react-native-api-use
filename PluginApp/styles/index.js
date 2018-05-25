@@ -4,18 +4,25 @@ import {
 } from 'react-native';
 
 
+
+const styleArr = [
+  { key: 'm', prefix: 'margin', },
+  { key: 'p', prefix: 'padding', }, 
+  { key: 'mv', prefix: 'marginVertical', }, 
+  { key: 'pv', prefix: 'paddingVertical', }, 
+  { key: 'mh', prefix: 'marginHorizontal', }, 
+  { key: 'ph', prefix: 'paddingHorizontal', }, 
+  { key: 'ml', prefix: 'marginLeft', }, 
+  { key: 'pl', prefix: 'paddingLeft', }, 
+  { key: 'mr', prefix: 'marginRight', }, 
+  { key: 'pr', prefix: 'paddingRight', }, 
+  { key: 'mt', prefix: 'marginTop', }, 
+  { key: 'pt', prefix: 'paddingTop', }, 
+  { key: 'mb', prefix: 'marginBottom', }, 
+  { key: 'pb', prefix: 'paddingBottom', }, 
+]
+ 
 const numArr = [5, 10, 15, 20, ]
-
-const numeArr = [5, 10, 15, 20, ]
-
-import {createStyle, } from './utils'
-createStyle(styleArr, suffixArr, numeArr, )
-createStyle('margin', suffixArr, numeArr, )
-createStyle('padding', suffixArr, numeArr, )
-createStyle('margin', 'Vertical', numeArr, )
-createStyle('padding', 'Vertical', numeArr, )
-createStyle('margin', 'Horizontal', numeArr, )
-createStyle('padding', 'Horizontal', numeArr, )
 
 import {createStyle, } from './utils'
 
