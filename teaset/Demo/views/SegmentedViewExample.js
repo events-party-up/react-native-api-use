@@ -7,14 +7,7 @@ import {StyleSheet, View, Image, ScrollView, Switch} from 'react-native';
 
 import {Theme, NavigationPage, ListRow, SegmentedView, Label, PullPicker} from 'teaset';
 
-export default class SegmentedViewExample extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'SegmentedView',
-    showBackButton: true,
-  };
-
+export default class SegmentedViewExample extends Component {
   constructor(props) {
     super(props);
     this.items = ['projector', 'carousel'];
@@ -63,7 +56,7 @@ export default class SegmentedViewExample extends NavigationPage {
     );
   }
 
-  renderPage() {
+  render() {
     let {custom} = this.state;
     return (
       <View style={{flex: 1}}>

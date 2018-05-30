@@ -7,14 +7,7 @@ import {StyleSheet, View, PanResponder, Image, TouchableOpacity, Animated} from 
 
 import {NavigationPage, Input} from 'teaset';
 
-export default class PanResponderExample extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'PanResponder',
-    showBackButton: true,
-  };
-
+export default class PanResponderExample extends Component {
   constructor(props) {
     super(props);
     this.createPanResponder();
@@ -159,7 +152,7 @@ export default class PanResponderExample extends NavigationPage {
     );
   }
 
-  renderPage() {
+  render() {
     return (
       <View style={{flex: 1}}>
         <MyTouchableOpacity style={styles.full} {...this.panResponder.panHandlers} />

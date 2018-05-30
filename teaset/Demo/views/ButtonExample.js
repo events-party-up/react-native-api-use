@@ -7,15 +7,8 @@ import {View, ScrollView, Text, Image} from 'react-native';
 
 import {NavigationPage, ListRow, Button, Label, Theme} from 'teaset';
 
-export default class ButtonExample extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'Button',
-    showBackButton: true,
-  };
-
-  renderPage() {
+export default class ButtonExample extends Component {
+  render() {
     return (
       <ScrollView style={{flex: 1}}>
         <View style={{height: 20}} />

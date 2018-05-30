@@ -7,15 +7,8 @@ import {StyleSheet, View, Image, ScrollView} from 'react-native';
 
 import {NavigationPage, ListRow, Popover, Label} from 'teaset';
 
-export default class PopoverExample extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'Popover',
-    showBackButton: true,
-  };
-
-  renderPage() {
+export default class PopoverExample extends Component {
+  render() {
     let img = require('../images/faircup.jpg');
     return (
       <ScrollView style={{flex: 1}}>

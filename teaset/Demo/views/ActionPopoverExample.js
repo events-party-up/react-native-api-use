@@ -7,14 +7,7 @@ import {View} from 'react-native';
 
 import {NavigationPage, ActionPopover, Button} from 'teaset';
 
-export default class ActionPopoverExample extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'ActionPopover',
-    showBackButton: true,
-  };
-
+export default class ActionPopoverExample extends Component {
   show(view) {
     view.measure((x, y, width, height, pageX, pageY) => {
       let items = [
@@ -26,7 +19,7 @@ export default class ActionPopoverExample extends NavigationPage {
     });
   }
 
-  renderPage() {
+  render() {
     return (
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
         <Button title='Show' ref='apButton' onPress={() => this.show(this.refs['apButton'])} />

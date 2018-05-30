@@ -8,14 +8,7 @@ import {View, ScrollView, Image} from 'react-native';
 import {Theme, NavigationPage, ListRow, Drawer, Button, Label} from 'teaset';
 import SelectRow from './SelectRow';
 
-export default class DrawerExample extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'Drawer',
-    showBackButton: true,
-  };
-
+export default class DrawerExample extends Component {
   constructor(props) {
     super(props);
     Object.assign(this.state, {
@@ -87,7 +80,7 @@ export default class DrawerExample extends NavigationPage {
     );
   }
 
-  renderPage() {
+  render() {
     let {rootTransform} = this.state;
     return (
       <ScrollView style={{flex: 1}}>

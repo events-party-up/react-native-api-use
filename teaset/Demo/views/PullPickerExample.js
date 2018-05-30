@@ -7,14 +7,7 @@ import {View, ScrollView} from 'react-native';
 
 import {NavigationPage, ListRow, PullPicker} from 'teaset';
 
-export default class PullPickerExample extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'PullPicker',
-    showBackButton: true,
-  };
-
+export default class PullPickerExample extends Component {
   constructor(props) {
     super(props);
     this.items = [
@@ -53,7 +46,7 @@ export default class PullPickerExample extends NavigationPage {
     );
   }
 
-  renderPage() {
+  render() {
     let {selectedIndex, modalSelectedIndex} = this.state;
     let selected = (selectedIndex || selectedIndex === 0) ? this.items[selectedIndex] : null;
     let modalSelected = (modalSelectedIndex || modalSelectedIndex === 0) ? this.items[modalSelectedIndex] : null;

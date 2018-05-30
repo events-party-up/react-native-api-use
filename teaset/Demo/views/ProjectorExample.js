@@ -7,14 +7,7 @@ import {StyleSheet, View, ScrollView} from 'react-native';
 
 import {NavigationPage, ListRow, Projector, Button, Label, Input} from 'teaset';
 
-export default class ProjectorExample extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'Projector',
-    showBackButton: true,
-  };
-
+export default class ProjectorExample extends Component {
   constructor(props) {
     super(props);
     Object.assign(this.state, {
@@ -42,7 +35,7 @@ export default class ProjectorExample extends NavigationPage {
     );
   }
 
-  renderPage() {
+  render() {
     return (
       <ScrollView style={{flex: 1}}>
         <Projector style={{height: 238}} index={this.state.index}>

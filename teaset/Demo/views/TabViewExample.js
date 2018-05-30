@@ -7,13 +7,7 @@ import {StyleSheet, View, ScrollView, Image, Switch, Platform} from 'react-nativ
 
 import {Theme, TeaNavigator, NavigationPage, BasePage, ListRow, TabView, Label, PullPicker} from 'teaset';
 
-export default class TabViewExample extends BasePage {
-
-  static defaultProps = {
-    ...BasePage.defaultProps,
-    scene: TeaNavigator.SceneConfigs.PushFromRight,
-  };
-
+export default class TabViewExample extends Component {
   constructor(props) {
     super(props);
     Object.assign(this.state, {
@@ -52,7 +46,7 @@ export default class TabViewExample extends BasePage {
     );
   }
 
-  renderPage() {
+  render() {
     let {type, custom} = this.state;
     let customBarStyle = Platform.OS == 'android'  ? null : {
       borderTopWidth: 0,
@@ -90,14 +84,7 @@ export default class TabViewExample extends BasePage {
 
 }
 
-class HomePage extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'Home',
-    showBackButton: true,
-  };
-
+class HomePage extends Component {
   selectType() {
     let {type, onChangeType} = this.props;
     let items = ['projector', 'carousel'];
@@ -109,7 +96,7 @@ class HomePage extends NavigationPage {
     );
   }
 
-  renderPage() {
+  render() {
     let {type, custom, onChangeCustom} = this.props;
     return (
       <ScrollView style={{flex: 1}}>

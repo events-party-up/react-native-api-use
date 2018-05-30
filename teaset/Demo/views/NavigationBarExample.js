@@ -8,14 +8,7 @@ import {Platform, View, ScrollView, Switch, Image} from 'react-native';
 import {Theme, NavigationPage, ListRow, NavigationBar, Label} from 'teaset';
 import SelectRow from './SelectRow';
 
-export default class NavigationBarExample extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'NavigationBar',
-    navigationBarInsets: false,
-  };
-
+export default class NavigationBarExample extends Component {
   constructor(props) {
     super(props);
 
@@ -149,7 +142,7 @@ export default class NavigationBarExample extends NavigationPage {
     );
   }
 
-  renderPage() {
+  render() {
     let {type, title, leftView, rightView, bgColor, tintColor, customBackground, hidden, animated, statusBarStyle, statusBarHidden} = this.state;
     return (
       <ScrollView style={{flex: 1, paddingTop: Theme.statusBarHeight}}>

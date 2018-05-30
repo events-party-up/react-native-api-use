@@ -7,14 +7,7 @@ import {View, ScrollView, Text} from 'react-native';
 
 import {NavigationPage, ListRow, Input, Label} from 'teaset';
 
-export default class InputExample extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'Input',
-    showBackButton: true,
-  };
-
+export default class InputExample extends Component {
   constructor(props) {
     super(props);
     Object.assign(this.state, {
@@ -27,7 +20,7 @@ export default class InputExample extends NavigationPage {
     });
   }
 
-  renderPage() {
+  render() {
     return (
       <ScrollView style={{flex: 1}}>
         <View style={{height: 20}} />

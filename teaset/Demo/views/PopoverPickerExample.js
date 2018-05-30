@@ -7,14 +7,7 @@ import {View, ScrollView} from 'react-native';
 
 import {NavigationPage, ListRow, PopoverPicker} from 'teaset';
 
-export default class PopoverPickerExample extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'PopoverPicker',
-    showBackButton: true,
-  };
-
+export default class PopoverPickerExample extends Component {
   constructor(props) {
     super(props);
     this.items = [
@@ -57,7 +50,7 @@ export default class PopoverPickerExample extends NavigationPage {
     });
   }
 
-  renderPage() {
+  render() {
     let {selectedIndex, modalSelectedIndex} = this.state;
     let selected = (selectedIndex || selectedIndex === 0) ? this.items[selectedIndex] : null;
     let modalSelected = (modalSelectedIndex || modalSelectedIndex === 0) ? this.items[modalSelectedIndex] : null;

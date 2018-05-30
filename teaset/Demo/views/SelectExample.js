@@ -7,14 +7,7 @@ import {View, Text, Image, ScrollView} from 'react-native';
 
 import {NavigationPage, ListRow, Select, Label} from 'teaset';
 
-export default class SelectExample extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'Select',
-    showBackButton: true,
-  };
-
+export default class SelectExample extends Component {
   constructor(props) {
     super(props);
     this.items = [
@@ -53,7 +46,7 @@ export default class SelectExample extends NavigationPage {
     });
   }
 
-  renderPage() {
+  render() {
     let {valueSM, valueMD, valueLG, valueAuto, valuePull, valuePopover, valueReadonly, valueDisable, valueCustom} = this.state;
     return (
       <ScrollView style={{flex: 1}}>

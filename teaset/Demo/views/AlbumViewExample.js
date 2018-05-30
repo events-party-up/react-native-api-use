@@ -7,14 +7,7 @@ import {View, Image, TouchableOpacity, StatusBar} from 'react-native';
 
 import {Theme, NavigationPage, AlbumView, Overlay, Button} from 'teaset';
 
-export default class AlbumViewExample extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: ' AlbumView',
-    showBackButton: true,
-  };
-
+export default class AlbumViewExample extends Component {
   constructor(props) {
     super(props);
     this.images = [
@@ -59,7 +52,7 @@ export default class AlbumViewExample extends NavigationPage {
 
   }
 
-  renderPage() {
+  render() {
     return (
       <View style={{flex: 1}}>
         <View style={{padding: 20, flexDirection:'row', flexWrap:'wrap', alignItems:'flex-start'}}>

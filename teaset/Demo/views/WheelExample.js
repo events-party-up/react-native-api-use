@@ -7,14 +7,7 @@ import {View} from 'react-native';
 
 import {NavigationPage, Theme, Wheel} from 'teaset';
 
-export default class WheelExample extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'Wheel',
-    showBackButton: true,
-  };
-
+export default class WheelExample extends Component {
   constructor(props) {
     super(props);
     this.years = [];
@@ -49,7 +42,7 @@ export default class WheelExample extends NavigationPage {
     this.setState({date});
   }
 
-  renderPage() {
+  render() {
     let {date} = this.state;
     let year = date.getFullYear(), month = date.getMonth(), day = date.getDate();
     let daysCount = this.daysCount[this.isLeapYear(year) ? 1 : 0][month];

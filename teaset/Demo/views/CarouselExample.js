@@ -7,14 +7,7 @@ import {StyleSheet, View, Text, Image, ScrollView, Dimensions} from 'react-nativ
 
 import {NavigationPage, ListRow, Carousel, PullPicker} from 'teaset';
 
-export default class CarouselExample extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'Carousel',
-    showBackButton: true,
-  };
-
+export default class CarouselExample extends Component {
   constructor(props) {
     super(props);
     this.items = ['none', 'default', 'custom'];
@@ -48,7 +41,7 @@ export default class CarouselExample extends NavigationPage {
     }
   }
 
-  renderPage() {
+  render() {
     let {width} = this.state;
     return (
       <ScrollView style={{flex: 1}}>

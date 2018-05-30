@@ -8,17 +8,9 @@ import {StyleSheet, View, Image, ScrollView, Switch} from 'react-native';
 import {Theme, NavigationPage, ListRow, Label, SegmentedBar, PullPicker, Carousel} from 'teaset';
 import SelectRow from './SelectRow';
 
-export default class SegmentedBarExample extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'SegmentedBar',
-    showBackButton: true,
-  };
-
+export default class SegmentedBarExample extends Component {
   constructor(props) {
     super(props);
-
     this.barItems = [
       'Apple',
       'Banana',
@@ -93,7 +85,7 @@ export default class SegmentedBarExample extends NavigationPage {
     });
   }
 
-  renderPage() {
+  render() {
     let {justifyItem, indicatorType, indicatorPosition, animated, autoScroll, custom, activeIndex} = this.state;
     let barItems = custom ? this.barCustomItems : (justifyItem == 'scrollable' ? this.barScrollItems : this.barItems);
     return (

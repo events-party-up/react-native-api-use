@@ -1,8 +1,4 @@
-// HomeScreen.js
-
-'use strict';
-
-import React, {Component} from 'react';
+import React, { PureComponent, Component } from "react"
 import {View, ScrollView} from 'react-native';
 
 import {Theme, NavigationPage, NavigationBar, ListRow} from 'teaset';
@@ -36,14 +32,8 @@ import MenuExample from './MenuExample';
 import DrawerExample from './DrawerExample';
 import ModalIndicatorExample from './ModalIndicatorExample';
 
-class HomeScreen extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'Teaset Example',
-  };
-
-  renderPage() {
+class HomeScreen extends Component {
+  render() {
     return (
       <ScrollView style={{flex: 1}}>
         <View style={{height: 20}} />

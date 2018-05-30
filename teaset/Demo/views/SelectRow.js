@@ -8,7 +8,6 @@ import PropTypes from 'prop-types';
 import {Theme, ListRow, Select} from 'teaset';
 
 export default class SelectRow extends ListRow {
-
   static propTypes = {
     ...ListRow.propTypes,
     value: PropTypes.any,

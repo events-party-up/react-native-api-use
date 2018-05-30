@@ -7,14 +7,7 @@ import {View} from 'react-native';
 
 import {NavigationPage, Menu, Button, Theme} from 'teaset';
 
-export default class MenuExample extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'Menu',
-    showBackButton: true,
-  };
-
+export default class MenuExample extends Component {
   show(view, align) {
     view.measure((x, y, width, height, pageX, pageY) => {
       let items = [
@@ -26,7 +19,7 @@ export default class MenuExample extends NavigationPage {
     });
   }
 
-  renderPage() {
+  render() {
     return (
       <View style={{flex: 1, justifyContent: 'space-between'}}>
         <View style={{height: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around'}}>

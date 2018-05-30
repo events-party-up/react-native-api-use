@@ -7,14 +7,7 @@ import {View, ScrollView} from 'react-native';
 
 import {NavigationPage, ListRow, ActionSheet, Label} from 'teaset';
 
-export default class ActionSheetExample extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'ActionSheet',
-    showBackButton: true,
-  };
-
+export default class ActionSheetExample extends Component {
   show(modal) {
     let items = [
       {title: 'Say hello', onPress: () => alert('Hello')},
@@ -25,7 +18,7 @@ export default class ActionSheetExample extends NavigationPage {
     ActionSheet.show(items, cancelItem, {modal});
   }
 
-  renderPage() {
+  render() {
     return (
       <ScrollView style={{flex: 1}}>
         <View style={{height: 20}} />

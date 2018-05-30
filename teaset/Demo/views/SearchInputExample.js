@@ -7,14 +7,7 @@ import {View, ScrollView} from 'react-native';
 
 import {NavigationPage, ListRow, SearchInput} from 'teaset';
 
-export default class SearchInputExample extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'SearchInput',
-    showBackButton: true,
-  };
-
+export default class SearchInputExample extends Component {
   constructor(props) {
     super(props);
     Object.assign(this.state, {
@@ -22,7 +15,7 @@ export default class SearchInputExample extends NavigationPage {
     });
   }
 
-  renderPage() {
+  render() {
     return (
       <ScrollView style={{flex: 1}}>
         <View style={{height: 20}} />

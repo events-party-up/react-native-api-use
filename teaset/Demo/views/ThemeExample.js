@@ -7,14 +7,7 @@ import {View, ScrollView, ActivityIndicator} from 'react-native';
 
 import {Theme, NavigationPage, ListRow, PullPicker} from 'teaset';
 
-export default class ThemeExample extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'Theme',
-    showBackButton: true,
-  };
-
+export default class ThemeExample extends Component {
   changeTheme() {
     PullPicker.show(
       'Select theme',
@@ -27,7 +20,7 @@ export default class ThemeExample extends NavigationPage {
     );
   }
 
-  renderPage() {
+  render() {
     return (
       <ScrollView style={{flex: 1}}>
         <View style={{height: 20}} />

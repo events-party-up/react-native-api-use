@@ -1,0 +1,46 @@
+{
+  "name": "react-native-timeline",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "moment": "^2.20.1",
+    "react": "^16.3.0-alpha.1",
+    "react-native": "0.54.0",
+    "react-native-dash": "^0.0.8",
+    "react-native-vector-icons": "^4.5.0"
+  },
+  "devDependencies": {
+    "babel-jest": "22.4.1",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "22.4.2",
+    "react-test-renderer": "^16.3.0-alpha.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "description": "Timeline for react native with flexbox and flatlist",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomzaku/react-native-timeline.git"
+  },
+  "keywords": [
+    "react-native",
+    "timeline",
+    "flexbox",
+    "flatlist"
+  ],
+  "author": "zaku",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomzaku/react-native-timeline/issues"
+  },
+  "homepage": "https://github.com/tomzaku/react-native-timeline#readme"
+}

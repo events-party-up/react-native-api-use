@@ -7,14 +7,7 @@ import {View, ScrollView, Image} from 'react-native';
 
 import {NavigationPage, ListRow, Checkbox, Label} from 'teaset';
 
-export default class CheckboxExample extends NavigationPage {
-
-  static defaultProps = {
-    ...NavigationPage.defaultProps,
-    title: 'Checkbox',
-    showBackButton: true,
-  };
-
+export default class CheckboxExample extends Component {
   constructor(props) {
     super(props);
     Object.assign(this.state, {
@@ -27,7 +20,7 @@ export default class CheckboxExample extends NavigationPage {
     });
   }
 
-  renderPage() {
+  render() {
     return (
       <ScrollView style={{flex: 1}}>
         <View style={{height: 20}} />
