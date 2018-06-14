@@ -229,14 +229,11 @@ export default class SectionListExample extends React.PureComponent {
   }
   // 告诉列表发生了交互，这应该引发可见性计算，例如，如果
   // waitForInteractions为true并且用户没有滚动。这通常是通过点击项目或导航操作来调用的。
-  recordInteraction = (e, v) => {
-    console.log('  recordInteraction ：', e, v,  )
-  }
   // 主动通知列表发生了一个事件，以使列表重新计算可视区域。比如说当waitForInteractions 为 true 并且用户没有滚动列表时，
   // 就可以调用这个方法。不过一般来说，当用户点击了一个列表项，或发生了一个导航动作时，我们就可以调用这个方法。
   recordInteraction = (e, v) => {
     console.log('  recordInteraction ：', e, v,  )
-    this.section.recordInteraction()
+    this.section.getNode().recordInteraction()
   }
   // 短暂地显示滚动指示器。
   flashScrollIndicators = (e, v) => {

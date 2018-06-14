@@ -135,8 +135,44 @@
 // import App from './project/Plugin/rn-paper-interface-app
 // import App from './project/Plugin/rn-placeholder
 // import App from './project/Plugin/rn-wheel-picker-china-region
-// import App from './project/Plugin/
-// import App from './project/Plugin/
+
+
+
+
+
+
+// import App from './project/Plugin/aurora-imui'
+// import App from './project/Plugin/fastui-form'
+// import App from './project/Plugin/kittenTricks'
+// import App from './project/Plugin/react-native-af-video-player'
+// import App from './project/Plugin/react-native-audio-streaming'
+// import App from './project/Plugin/react-native-barcode-qrcode'
+// import App from './project/Plugin/react-native-ble'
+// import App from './project/Plugin/react-native-ble-manager'
+// import App from './project/Plugin/react-native-ble-plx'
+// import App from './project/Plugin/react-native-camera-roll-picker'
+// import App from './project/Plugin/react-native-customized-image-picker'
+// import App from './project/Plugin/react-native-gifted-chat'
+// import App from './project/Plugin/react-native-globalize'
+// import App from './project/Plugin/react-native-img-cache'
+// import App from './project/Plugin/react-native-interactable'
+// import App from './project/Plugin/react-native-location'
+// import App from './project/Plugin/react-native-maps'
+// import App from './project/Plugin/react-native-modal'
+// import App from './project/Plugin/react-native-onesignal'
+// import App from './project/Plugin/react-native-paper'
+// import App from './project/Plugin/react-native-pdf-view'
+// import App from './project/Plugin/react-native-push-notification'
+// import App from './project/Plugin/react-native-settings-list'
+// import App from './project/Plugin/react-native-shadow'
+// import App from './project/Plugin/react-native-textinput-effects'
+// import App from './project/Plugin/react-native-thesidebar'
+// import App from './project/Plugin/react-native-touch-id'
+// import App from './project/Plugin/react-native-ui-kitten'
+// import App from './project/Plugin/react-native-wechat'
+// import App from './project/Plugin/react-swipeable-views'
+// import App from './project/Plugin/rn-textinputlayout'
+// import App from './project/Plugin/tcomb-form-native'
 // import App from './project/Plugin/
 // import App from './project/Plugin/
 // import App from './project/Plugin/
