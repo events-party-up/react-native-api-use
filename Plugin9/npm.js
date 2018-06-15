@@ -14,4 +14,8 @@ npm i autoresponsive-react-native react-native-background-geolocation react-nati
 
 
 11
-npm i aurora-imui fastui-form kittenTricks react-native-af-video-player react-native-audio-streaming react-native-barcode-qrcode react-native-ble react-native-ble-manager react-native-ble-plx react-native-camera-roll-picker react-native-customized-image-picker react-native-gifted-chat react-native-globalize react-native-img-cache react-native-interactable react-native-location react-native-maps react-native-modal react-native-onesignal react-native-paper react-native-pdf-view react-native-push-notification react-native-settings-list react-native-shadow  react-native-textinput-effects react-native-thesidebar react-native-touch-id react-native-ui-kitten react-native-wechat react-swipeable-views rn-textinputlayout tcomb-form-native -S  
+npm i aurora-imui fastui-form kittenTricks react-native-af-video-player react-native-audio-streaming react-native-barcode-qrcode react-native-ble react-native-ble-manager react-native-ble-plx react-native-camera-roll-picker react-native-customized-image-picker react-native-gifted-chat react-native-globalize react-native-img-cache react-native-interactable react-native-location react-native-maps react-native-modal react-native-onesignal react-native-paper react-native-pdf-view react-native-push-notification react-native-settings-list react-native-shadow  react-native-textinput-effects react-native-thesidebar react-native-touch-id react-native-ui-kitten react-native-wechat react-swipeable-views rn-textinputlayout tcomb-form-native -S 
+
+
+12
+npm i react-animated-views react-native-amap3d react-native-animated-gallery react-native-animated-list react-native-animated-message react-native-animated-playground react-native-image-fit react-native-animation-workshop react-native-imagefooter-listview react-native-image-placeholder react-native-interactive-image-gallery react-native-PDFView react-native-perspective-image-cropper -S
